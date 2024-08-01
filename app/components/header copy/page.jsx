@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 let tabs = [
   { id: "about", label: "About" },
@@ -17,15 +17,15 @@ function useBoundedScroll(threshold) {
     [0, 1]
   );
 
-  useEffect(() => {
-    return scrollY.on("change", (current) => {
-      let previous = scrollY.getPrevious();
-      let diff = current - previous;
-      let newScrollYBounded = scrollYBounded.get() + diff;
+  // useEffect(() => {
+  //   return scrollY.on("change", (current) => {
+  //     let previous = scrollY.getPrevious();
+  //     let diff = current - previous;
+  //     let newScrollYBounded = scrollYBounded.get() + diff;
 
-      scrollYBounded.set(clamp(newScrollYBounded, 0, threshold));
-    });
-  }, [threshold, scrollY, scrollYBounded]);
+  //     scrollYBounded.set(clamp(newScrollYBounded, 0, threshold));
+  //   });
+  // }, [threshold, scrollY, scrollYBounded]);
 
   return { scrollYBounded, scrollYBoundedProgress };
 }
