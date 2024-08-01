@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    height: 13vh;
+    align-items: flex-end;
+    /* justify-content: start; */
+    margin-bottom: 10vh;
+    margin-top: 10px;
+    color: rgb(211, 211, 211);
+}
+
+.body{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body p{
+    font-size: 32px;
+    margin: 0px;
+    margin-right: 1.2vw;
+    font-weight: 700;
+}
+
+.body span{
+    opacity: 0.2;
+}
