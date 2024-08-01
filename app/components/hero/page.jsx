@@ -1,6 +1,5 @@
+"use client";
 
-
-import React, { useEffect } from "react";
 import style from "./index.module.scss";
 import Image from "next/image";
 import moment from "moment";
@@ -8,6 +7,7 @@ import "./style.css";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import D from "@/public/D.svg";
+import { useEffect } from "react";
 
 const Hero = () => {
   useEffect(() => {
