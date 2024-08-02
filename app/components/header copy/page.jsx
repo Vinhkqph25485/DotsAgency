@@ -1,5 +1,7 @@
+'use client';
+
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 let tabs = [
   { id: "about", label: "About" },
@@ -8,35 +10,8 @@ let tabs = [
   { id: "blogs", label: "Blogs" },
 ];
 
-function useBoundedScroll(threshold) {
-  let { scrollY } = useScroll();
-  let scrollYBounded = useMotionValue(0);
-  let scrollYBoundedProgress = useTransform(
-    scrollYBounded,
-    [0, threshold],
-    [0, 1]
-  );
-
-  // useEffect(() => {
-  //   return scrollY.on("change", (current) => {
-  //     let previous = scrollY.getPrevious();
-  //     let diff = current - previous;
-  //     let newScrollYBounded = scrollYBounded.get() + diff;
-
-  //     scrollYBounded.set(clamp(newScrollYBounded, 0, threshold));
-  //   });
-  // }, [threshold, scrollY, scrollYBounded]);
-
-  return { scrollYBounded, scrollYBoundedProgress };
-}
 
 export default function Header() {
-  let { scrollYBoundedProgress } = useBoundedScroll(400);
-  let scrollYBoundedProgressDelayed = useTransform(
-    scrollYBoundedProgress,
-    [0, 0.75, 1],
-    [0, 0, 1]
-  );
 
   return (
     <div className="flex w-screen flex-1 overflow-hidden text-slate-600 absolute z-[1002]">
@@ -131,4 +106,4 @@ export default function Header() {
   );
 }
 
-let clamp = (number, min, max) => Math.min(Math.max(number, min), max);
+// let clamp = (number, min, max) => Math.min(Math.max(number, min), max);
