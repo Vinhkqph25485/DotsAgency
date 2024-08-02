@@ -49,7 +49,7 @@ const Contact = () => {
                   type="text"
                   placeholder="Nhu cầu cần tư vấn"
                 />
-                <button className="flex justify-between bg-[#C8D5BB] px-5 py-2 rounded-full w-full mt-3 hover:bg-white transition duration-300 ease-in-out">
+                <button className="flex justify-between bg-[#C8D5BB] px-5 py-2 rounded-full w-full mt-3 hover:bg-white hover:text-black  hover:shadow-zinc-400 hover:shadow-lg transition duration-300 delay-100 ease-in-out">
                   Let’s talk now! <span className="text-black">●</span>
                 </button>
               </form>
