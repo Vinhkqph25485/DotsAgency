@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-import { useEffect } from "react";
+import { motion} from "framer-motion";
 
 let tabs = [
   { id: "about", label: "About" },
