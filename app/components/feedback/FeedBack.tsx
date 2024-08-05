@@ -82,7 +82,7 @@ const Feedback = () => {
   return (
     <>
       <div className="mx-5 bg-black text-white py-10">
-        <div className="text-white mb-5 mx-7 opacity-50">● KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</div>
+        <div className="text-white mb-5 mx-5 opacity-70">● KHÁCH HÀNG NÓI GÌ VỀ CHÚNG TÔI</div>
         <div className={style.wrapper} onClick={handleClick}>
           <div
             style={{

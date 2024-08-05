@@ -1,13 +1,79 @@
 import Carousel from "@/app/carousel/page";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import styles from "./page.module.css";
+import { useRef, useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 // Import Swiper styles
 import { Autoplay } from "swiper";
 import "swiper/css";
 
 const Team = () => {
   const [active, setActive] = useState(null);
+  const phrase =
+    "       Tại D , đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất. Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và chuyên môn cao trong lĩnh vực.";
+
+  let refs = useRef([]);
+  const body = useRef(null);
+  const container = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    createAnimation();
+  }, []);
+
+  const createAnimation = () => {
+    gsap.to(refs.current, {
+      scrollTrigger: {
+        trigger: container.current,
+        scrub: true,
+        start: `top 90%`,
+        end: `+=${window.innerHeight / 1.5}`,
+      },
+      opacity: 1,
+      ease: "none",
+      stagger: 0.1,
+    });
+  };
+
+  const splitWords = (phrase) => {
+    let body = [];
+    phrase.split(" ").forEach((word, i) => {
+      const letters = splitLetters(word);
+      body.push(<p key={word + "_" + i}>{letters}</p>);
+    });
+    return body;
+  };
+
+  const splitLetters = (word) => {
+    let letters = [];
+    word.split("").forEach((letter, i) => {
+      if (letter === "D" || letter === "O" || letter === "S") {
+        // Nếu chữ cái là D, O, T, hoặc S, thay thế bằng hình ảnh
+        letters.push(
+          <img
+            src="/DOST.svg"
+            alt="DOTS"
+            key="DOTS"
+            style={{ height: "96px", width: "128px", marginTop: "-38px", marginRight: "-20px", marginBottom: "-5px"}}
+          />,
+        );
+      } else {
+        letters.push(
+          <span
+            key={letter + "_" + i}
+            ref={(el) => {
+              refs.current.push(el);
+            }}
+          >
+            {letter}
+          </span>
+        );
+      }
+    });
+    return letters;
+  };
   const langs = [
     { name: "Quân Nguyễn" },
     { name: "Quân Nguyễn" },
@@ -18,19 +84,21 @@ const Team = () => {
     { name: "Quân Nguyễn" },
   ];
   return (
-    <div className="py-10 h-screen">
+    <div className="py-10 h-screen mb-[100px]">
       <div className="flex justify-between">
-        <span className="text-white px-5 ">● Đội ngũ của DOTS</span>
-        <div className="text-white text-3xl w-[50%] px-10">
-          <span className="text-black">aaaaaaa</span>Tại Dost,{" "}
-          <span className="text-green-200">
-            đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất
+        <span className="text-white px-10 ">● ĐỘI NGŨ CỦA DOTS</span>
+        <div className="text-white text-3xl w-[70%] px-10">
+        <div className="pl-[1px] mt-[115px]">
+          <span ref={container} className={styles.main}>
+            <span ref={body} className={styles.body}>
+              {splitWords(phrase)}
+            </span>
           </span>
-          . Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và
-          chuyên môn cao trong lĩnh vực.
+        </div>
+
         </div>
       </div>
-      <div className="h-screen bg-black flex items-center justify-center text-white mt-[-100px]">
+      <div className="h-[400px] bg-black flex items-center justify-center text-white">
         <div className="max-w-7xl">
           <Swiper
             spaceBetween={20}

@@ -59,9 +59,9 @@ export default function Typograph() {
   };
 
   return (
-    <div className="px-5 py-10">
+    <div className="px-10 py-10">
       <div className="py-5">
-        <span className="text-white px-5 ">● Giới Thiệu</span>
+        <span className="text-white px-5 opacity-70">● GIỚI THIỆU</span>
         <div className="pl-[10px]">
           <span ref={container} className={styles.main}>
             <span ref={body} className={styles.body}>
@@ -75,7 +75,7 @@ export default function Typograph() {
       </div>
 
       <div className="py-10">
-        <span className="text-white px-5">● Dịch vụ của chúng tôi</span>
+        <span className="text-white px-5 opacity-70">● DỊCH VỤ CỦA CHÚNG TÔI</span>
         <Gallery />
       </div>
     </div>

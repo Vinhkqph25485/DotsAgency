@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="mb-[200px]">
       <div className="relative h-screen">
         <div className="bg-black text-white p-10 mt-10  h-screen">
-          <div className="text-white mb-5">● Liên hệ</div>
+          <div className="text-white mb-5 opacity-70">● LIÊN HỆ</div>
           <div className="absolute top-[-50px]">
             <div className="text-white font-bold text-[120px] tracking-tight">
               <div className="flex ml-[120px]">

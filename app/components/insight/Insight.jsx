@@ -3,7 +3,7 @@ import React from "react";
 const Insight = () => {
   return (
     <div className="my-10 px-10 h-screen">
-      <div className="text-white px-5 my-10">● Insight</div>
+      <div className="text-white my-10 opacity-70">● INSIGHT</div>
       <div className="grid grid-cols-3 gap-2 text-white">
         <div className="group">
           <img src="/image 231.png" alt="" className="rounded-lg" />
