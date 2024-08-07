@@ -44,14 +44,24 @@ export const AboutUs = () => {
   const splitLetters = (word) => {
     let letters = [];
     word.split("").forEach((letter, i) => {
-      if (letter === "D" || letter === "O" || letter === "T" || letter === "S") {
+      if (
+        letter === "D" ||
+        letter === "O" ||
+        letter === "T" ||
+        letter === "S"
+      ) {
         // Nếu chữ cái là D, O, T, hoặc S, thay thế bằng hình ảnh
         letters.push(
           <img
             src="/DOST.svg"
             alt="DOTS"
             key="DOTS"
-            style={{ height: "96px", width: "128px", marginTop: "-38px", marginRight: "-20px"}}
+            style={{
+              height: "96px",
+              width: "128px",
+              marginTop: "-38px",
+              marginRight: "-20px",
+            }}
           />
         );
       } else {
@@ -71,19 +81,24 @@ export const AboutUs = () => {
   };
 
   return (
-    <div className="py-10 h-[1000px] bg-gradient-to-b from-[#232424] to-[#7b929f]">
-      <div className="py-5 z-10">
-        <span className="text-white px-10 opacity-70">● VỀ CHÚNG TÔI</span>
-        <div className="pl-[1px] mt-[70px]">
-          <span ref={container} className={styles.main}>
-            <span ref={body} className={styles.body}>
-              {splitWords(phrase)}
-            </span>
-          </span>
+    <div className="px-10 py-10 bg-gradient-to-b from-[#232424] to-[#7b929f]">
+      <div className="py-5 ">
+          <div className="relative w-[100%] h-[300px]">
+            <div className="text-white opacity-70 absolute top-[-32px]">● VỀ CHÚNG TÔI</div>
+            <div className="pl-[1px] mt-[70px]">
+              <span
+                ref={container}
+                className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-50px]"
+              >
+                <span ref={body} className={styles.body}>
+                  {splitWords(phrase)}
+                </span>
+              </span>
+            </div>
+          </div>
+        <div className="pb-10">
+          <Circle />
         </div>
-      </div>
-      <div className="pb-10">
-        <Circle />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export default function Project({ index, title, setModal, content }) {
       onMouseLeave={() => {
         setModal({ active: false, index });
       }}
-      className="group flex justify-between text-white px-5 items-center py-10 border-t-2 border-b-2 duration-400 opacity-50 hover:opacity-100"
+      className="group flex justify-between text-white px-5 items-center py-10 border-t-2 transition-all border-b-2 duration-400 opacity-50 hover:opacity-100 hover:py-[80px]"
     >
       <div className="flex justify-between text-white px-5 items-center duration-400">
         <div className="flex gap-10 items-center">
@@ -19,7 +19,7 @@ export default function Project({ index, title, setModal, content }) {
           <span className="text-5xl w-[350px] duration-400">{title}</span>
         </div>
       </div>
-      <span className="opacity-0 group-hover:opacity-100 transition duration-400 w-[350px]">
+      <span className="opacity-0 group-hover:opacity-100 transition-all duration-400 w-[350px]">
         {content}
       </span>
     </div>

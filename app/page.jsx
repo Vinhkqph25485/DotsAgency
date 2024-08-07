@@ -13,17 +13,15 @@ import Insight from "./components/insight/Insight";
 import Hero from "./components/hero/page";
 import Header from "./components/header copy/page";
 
-
 export default function Home() {
-
   return (
     <main className="relative">
-      <Header/>
-      <Hero/>
-      <Video />
-      <div className="flex items-center gap-3">
-        <Typograph />
+      <Header />
+      <div>
+        <Hero />
       </div>
+      <Video />
+      <Typograph />
       <AboutUs />
       <Team />
       {/* <Header ref={stickyElement} /> */}
@@ -44,15 +42,15 @@ export default function Home() {
       {/* <div style={{ height: "100vh" }}></div> */}
       {/* <Word value={paragraph} /> */}
       {/* <Smooth /> */}
-      
+
       {/* <EarthPage />
       <RevealLinks />
       <HoverImageLinks />
       <Cursor /> */}
-      
-      <FeedBack/>
-      <Contact/>
-      <Insight/>
+
+      <FeedBack />
+      <Contact />
+      <Insight />
       {/* <Mouse />
       {/* <Infinity />
       <Bezier /> */}

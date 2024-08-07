@@ -1,6 +1,6 @@
 'use client';
 
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 let tabs = [
   { id: "about", label: "About" },
@@ -13,28 +13,13 @@ let tabs = [
 export default function Header() {
 
   return (
-    <div className="flex w-screen flex-1 overflow-hidden text-slate-600 absolute z-[1002]">
+    <div className="flex w-screen flex-1 overflow-hidden text-slate-600 absolute z-[12]">
       <div className="z-0 flex-1 overflow-y-scroll">
         <motion.header
-          // style={{
-          //   height: useTransform(
-          //     scrollYBoundedProgressDelayed,
-          //     [0, 1],
-          //     [80, 50]
-          //   ),
-          //   backgroundColor: "transparent",
-          // }}
           className="fixed inset-x-0 flex h-20 shadow backdrop-blur-md"
         >
           <div className="flex w-full items-center justify-between px-8">
             <motion.p
-              // style={{
-              //   scale: useTransform(
-              //     scrollYBoundedProgressDelayed,
-              //     [0, 1],
-              //     [1, 0.9]
-              //   ),
-              // }}
               className="flex origin-left items-center text-xl text-white font-semibold uppercase"
             >
               <span className="w-6 h-6 rounded-full bg-white mr-2"></span>
@@ -54,13 +39,6 @@ export default function Header() {
               </span>
             </motion.p>
             <motion.nav
-              // style={{
-              //   opacity: useTransform(
-              //     scrollYBoundedProgressDelayed,
-              //     [0, 1],
-              //     [1, 0]
-              //   ),
-              // }}
               className="flex space-x-4 text-sm font-medium text-slate-400"
             >
               <div className="flex items-center">

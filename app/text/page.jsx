@@ -6,7 +6,7 @@ import gsap from "gsap";
 import Gallery from "../gallery/page";
 
 const phrase =
-  "        Chúng tôi là creative agency thiết kế website và xây dựng thương hiệu, Chúng tôi giúp doanh nghiệp kết nối với khách hàng bằng câu chuyện của thị giác, ngôn từ và sức mạnh của công nghệ.";
+  "            Chúng tôi là creative agency thiết kế website và xây dựng thương hiệu, Chúng tôi giúp doanh nghiệp kết nối với khách hàng bằng câu chuyện của thị giác, ngôn từ và sức mạnh của công nghệ.";
 
 export default function Typograph() {
   let refs = useRef([]);
@@ -61,13 +61,13 @@ export default function Typograph() {
   return (
     <div className="px-10 py-10">
       <div className="py-5">
-        <span className="text-white px-5 opacity-70">● GIỚI THIỆU</span>
-        <div className="pl-[10px]">
-          <span ref={container} className={styles.main}>
+        <div className="pl-[10px] relative w-[100%] h-[300px]">
+          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-50px]">
             <span ref={body} className={styles.body}>
               {splitWords(phrase)}
             </span>
           </span>
+          <div className="text-white opacity-70 absolute top-[-32px]">● GIỚI THIỆU</div>
         </div>
       </div>
       <div className="py-5 flex justify-center ">
@@ -75,7 +75,7 @@ export default function Typograph() {
       </div>
 
       <div className="py-10">
-        <span className="text-white px-5 opacity-70">● DỊCH VỤ CỦA CHÚNG TÔI</span>
+        <span className="text-white opacity-70">● DỊCH VỤ CỦA CHÚNG TÔI</span>
         <Gallery />
       </div>
     </div>

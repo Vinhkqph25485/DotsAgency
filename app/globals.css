@@ -41,12 +41,12 @@ body{
 } */
 
 @font-face {
-    font-family: 'Snell Roundhand';
+    font-family: 'PPRader';
     src: url('../public/medias/PPRader-Regular.ttf')
     /* Thay đổi đường dẫn đến font file của bạn */
   }
   
-  .font-snell {
-    font-family: 'Snell Roundhand', cursive;
-  }
+  /* .font-snell {
+    font-family: 'PPRader', cursive;
+  } */
  
