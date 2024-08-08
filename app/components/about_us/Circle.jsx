@@ -28,8 +28,8 @@ const Circle = () => {
     color: activeDiv === id ? "#000000" : "rgba(255, 255, 255, 0.30)",
     fontSize: activeDiv === id ? "24px" : "96px",
     zIndex: "2",
-    width: width || "160px",
-    height: height || "160px",
+    width: activeDiv == id ? "210px" : width || "160px",
+    height: activeDiv == id ? "210px" : height || "160px",
     borderRadius: "100%",
     border: "1px solid rgba(255, 255, 255, 0.40)",
     backgroundColor: activeDiv === id ? "#C8D5BB" : "transparent",
@@ -39,13 +39,13 @@ const Circle = () => {
   const getLetterStylePosition = (id) => {
     switch (id) {
       case "D":
-        return "50px";
+        return "55px";
       case "O":
-        return "42px";
+        return "66px";
       case "T":
-        return "30px";
+        return "56px";
       case "S":
-        return "46px";
+        return "60px";
       default:
         return "50%";
     };
