@@ -16,19 +16,20 @@ import Header from "./components/header copy/page";
 export default function Home() {
   return (
     <main className="relative">
-      <Header />
-      <div>
-        <Hero />
-      </div>
-      <Video />
-      <Typograph />
-      <AboutUs />
-      <Team />
-      {/* <Header ref={stickyElement} /> */}
-      {/* <StickyCursor stickyElement={stickyElement} /> */}
-      {/* <Typograph /> */}
-      {/* <div style={{ height: "100vh" }}></div> */}
-      {/* <section className="flex flex-col items-center justify-center">
+      <div className="">
+        <Header />
+        <div>
+          <Hero />
+        </div>
+        <Video />
+        <Typograph />
+        <AboutUs />
+        <Team />
+        {/* <Header ref={stickyElement} /> */}
+        {/* <StickyCursor stickyElement={stickyElement} /> */}
+        {/* <Typograph /> */}
+        {/* <div style={{ height: "100vh" }}></div> */}
+        {/* <section className="flex flex-col items-center justify-center">
         <AnimatedText
           once
           text={paragraph}
@@ -37,24 +38,25 @@ export default function Home() {
           repeatDelay={10}
         />
       </section> */}
-      {/* <div style={{ height: "100vh" }}></div> */}
-      {/* <Character value={paragraph} /> */}
-      {/* <div style={{ height: "100vh" }}></div> */}
-      {/* <Word value={paragraph} /> */}
-      {/* <Smooth /> */}
+        {/* <div style={{ height: "100vh" }}></div> */}
+        {/* <Character value={paragraph} /> */}
+        {/* <div style={{ height: "100vh" }}></div> */}
+        {/* <Word value={paragraph} /> */}
+        {/* <Smooth /> */}
 
-      {/* <EarthPage />
+        {/* <EarthPage />
       <RevealLinks />
       <HoverImageLinks />
       <Cursor /> */}
 
-      <FeedBack />
-      <Contact />
-      <Insight />
-      {/* <Mouse />
+        <FeedBack />
+        <Contact />
+        <Insight />
+        {/* <Mouse />
       {/* <Infinity />
       <Bezier /> */}
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 }

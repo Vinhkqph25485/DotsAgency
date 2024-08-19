@@ -61,8 +61,8 @@ export default function Typograph() {
   return (
     <div className="px-10 py-10">
       <div className="py-5">
-        <div className="pl-[10px] relative w-[100%] h-[300px]">
-          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-50px]">
+        <div className="pl-[10px] relative w-[1920px] h-[300px]">
+          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-50px] tracking-tight">
             <span ref={body} className={styles.body}>
               {splitWords(phrase)}
             </span>

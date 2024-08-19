@@ -12,7 +12,7 @@ import "swiper/css";
 const Team = () => {
   const [active, setActive] = useState(null);
   const phrase =
-    "            Tại D ,đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất. Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và chuyên môn cao trong lĩnh vực.";
+    "          Tại D ,đội ngũ nhân sự của chúng tôi là tài sản quý giá nhất. Mỗi thành viên đều mang trong mình niềm đam mê, sự sáng tạo và chuyên môn cao trong lĩnh vực.";
 
   let refs = useRef([]);
   const body = useRef(null);
@@ -89,7 +89,7 @@ const Team = () => {
         <span className="text-white px-10 absolute ">● ĐỘI NGŨ CỦA DOTS</span>
         <div className="text-white text-3xl w-[70%] px-10">
         <div className="pl-[1px] mt-[115px]">
-          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-12px]">
+          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-12px] tracking-tight">
             <span ref={body} className={styles.body}>
               {splitWords(phrase)}
             </span>

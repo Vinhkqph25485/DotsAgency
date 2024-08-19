@@ -83,7 +83,7 @@ export const AboutUs = () => {
   return (
     <div className="px-10 py-10 bg-gradient-to-b from-[#232424] to-[#7b929f]">
       <div className="py-5 ">
-          <div className="relative w-[100%] h-[300px]">
+          <div className="relative w-[1920px] h-[300px]">
             <div className="text-white opacity-70 absolute top-[-32px]">● VỀ CHÚNG TÔI</div>
             <div className="pl-[1px] mt-[70px]">
               <span
