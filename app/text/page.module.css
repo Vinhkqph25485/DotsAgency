@@ -8,13 +8,13 @@
 }
 
 .body{
-    width: 70%;
+    width: "80%";
     display: flex;
     flex-wrap: wrap;
 }
 
 .body p{
-    font-size: 36px;
+    font-size: 62px;
     margin: 0px;
     margin-right: 1vw;
     font-weight: 700;

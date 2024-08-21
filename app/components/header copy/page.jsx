@@ -19,7 +19,7 @@ export default function Header() {
           }}
           className="fixed inset-x-0 flex h-20 py-[42px]"
         >
-          <div className="flex w-[1500px] items-center justify-between px-8 py-[42px]">
+          <div className="flex w-screen items-center justify-between px-8 py-[42px]">
             <motion.p className="flex origin-left items-center text-xl text-white font-semibold uppercase">
               <span className="w-[55px] h-[55px] rounded-full bg-white mr-2"></span>
               <span className="flex flex-col justify-center items-start">
@@ -45,7 +45,7 @@ export default function Header() {
                     style={{
                       backgroundColor: "#ffffff",
                       width: "106px",
-                      height: "60px",
+                      height: "69px",
                       fontSize: "21px",
                       color: "#000000",
                       borderRadius:
@@ -66,7 +66,7 @@ export default function Header() {
                   backgroundColor: "#C8D5BB",
                   borderRadius: "10px",
                   width: "106px",
-                  height: "60px",
+                  height: "69px",
                   fontSize: "21px",
                   marginLeft: "8px",
                   color: "#000000",

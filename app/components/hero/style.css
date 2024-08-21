@@ -1,20 +1,4 @@
-.hero-image {
-  position: absolute;
-  height: 650px;
-  width: 1224px;
-  top: 30%;
-  left: 38%;
-  transform: translate(-50%, -50%);
-}
 
-.hero-text {
-      position: absolute;
-      height: 950px;
-      width: 1200px;
-      top: 30%;
-      left: 28%;
-      transform: translate(-50%, -50%);
-    }
 
 /* @keyframes fly {
     0% {

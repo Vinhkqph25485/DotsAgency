@@ -61,16 +61,16 @@ export default function Typograph() {
   return (
     <div className="px-10 py-10">
       <div className="py-5">
-        <div className="pl-[10px] relative w-[1920px] h-[300px]">
-          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-50px] tracking-tight">
+        <div className="pl-[10px] relative h-[300px]">
+          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[20px] tracking-tight">
             <span ref={body} className={styles.body}>
               {splitWords(phrase)}
             </span>
           </span>
-          <div className="text-white opacity-70 absolute top-[-32px]">● GIỚI THIỆU</div>
+          <div className="text-white opacity-70 absolute top-[65px] text-[18px] flex items-center">● GIỚI THIỆU</div>
         </div>
       </div>
-      <div className="py-5 flex justify-center ">
+      <div className="pb-5 mt-[300px] flex justify-center">
         <img src="/dostagency.png" className="w-[50%] h-[50%]" alt="" />
       </div>
 
