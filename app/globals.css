@@ -9,11 +9,11 @@ body{
 }
 
 .card{
-  @apply w-72 cursor-pointer border-b-4 rounded-md bg-gradient-to-t from-[#c8ebd278]/20 h-44 text-center px-3  self-end duration-500 delay-100
+  @apply w-72 h-44 cursor-pointer border-b-4 rounded-md bg-gradient-to-t from-[#c8ebd278]/20 px-3  self-end duration-500 delay-100
 }
 
 .card-active {
-  @apply h-60 scale-[1.2] 
+  @apply h-80 scale-[1.2] 
 }
 /* .logo {
   @apply text-5xl mt-2 w-full h-full mx-auto  rounded-full text-red-600 grid place-items-center
@@ -24,7 +24,7 @@ body{
 }
 
 .card .skill-level {
-  @apply border-2 border-gray-200 text-white min-w-[3rem] min-h-[3rem] grid place-items-center rounded-full max-w-[3rem] absolute right-0 scale-0
+  @apply border-2 text-white min-w-[3rem] min-h-[3rem] grid place-items-center rounded-full max-w-[3rem] absolute right-0 scale-0
 }
 
 
@@ -32,9 +32,9 @@ body{
   @apply scale-[1.3] delay-700 duration-300
 }
 
-.card-active .logo{
+/* .card-active .logo{
   @apply bg-red-500 text-red-200
-}
+} */
 
 /* @font-face {
     font-family: 'Main';

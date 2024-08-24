@@ -56,8 +56,14 @@ const Team = () => {
             src="/DOST.svg"
             alt="DOTS"
             key="DOTS"
-            style={{ height: "96px", width: "128px", marginTop: "-38px", marginRight: "-20px", marginBottom: "-5px"}}
-          />,
+            style={{
+              height: "96px",
+              width: "148px",
+              marginTop: "-16px",
+              marginRight: "-20px",
+              marginBottom: "-5px",
+            }}
+          />
         );
       } else {
         letters.push(
@@ -86,64 +92,71 @@ const Team = () => {
   return (
     <div className="py-10 h-screen mb-[100px]">
       <div className="flex justify-between relative">
-        <span className="text-white px-10 absolute ">● ĐỘI NGŨ CỦA DOTS</span>
+        <span className="text-white px-10 absolute mt-[30px]">
+          ● ĐỘI NGŨ CỦA DOTS
+        </span>
         <div className="text-white text-3xl w-[70%] px-10">
-        <div className="pl-[1px] mt-[115px]">
-          <span ref={container} className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-12px] tracking-tight">
-            <span ref={body} className={styles.body}>
-              {splitWords(phrase)}
+          <div className="pl-[1px] mt-[115px]">
+            <span
+              ref={container}
+              className="text-[rgb(211, 211, 211)] flex items-end absolute top-[-12px] tracking-tight"
+            >
+              <span ref={body} className={styles.body}>
+                {splitWords(phrase)}
+              </span>
             </span>
-          </span>
-        </div>
+          </div>
         </div>
       </div>
-      <div className="h-[400px] bg-black flex items-center justify-center text-white">
-        <div className="max-w-7xl">
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={5}
-            onSlideChange={(cur) => setActive(cur.realIndex)}
-            loop={true}
-            centeredSlides={true}
-            speed={800}
-            autoplay={{ delay: 3000 }}
-            // modules={[Autoplay]}
-          >
-            {langs.map((lang, i) => {
-              return (
-                <>
-                  <SwiperSlide>
-                    <div className="h-96 flex">
-                      <div
-                        className={`card relative ${
-                          active === i && "card-active"
-                        } to-red-600/40`}
-                      >
-                        <div className="logo">
-                          <img
-                            src="/avatar.png"
-                            alt=""
-                            className="absolute -top-10"
-                          />
-                        </div>
-                        {active === i && (
-                          <div>
-                            <h2 className="absolute bottom-[40px] font-semibold para text-white">
-                              {lang.name}
-                            </h2>
-                            <br />
-                            <p className=" absolute bottom-[20px] opacity-80 ">
-                              Business Analyst
-                            </p>
+      <div>
+        <div className="h-[400px] bg-black flex items-center justify-center text-white">
+          <div className="w-full">
+            <Swiper
+              spaceBetween={40}
+              slidesPerView={5}
+              onSlideChange={(cur) => setActive(cur.realIndex)}
+              loop={true}
+              centeredSlides={true}
+              speed={800}
+              autoplay={{ delay: 3000 }}
+              // modules={[Autoplay]}
+            >
+              {langs.map((lang, i) => {
+                return (
+                  <>
+                    <SwiperSlide>
+                      <div className="h-96 flex">
+                        <div
+                          className={`card relative ${
+                            active === i && "card-active"
+                          }`}
+                        >
+                          <div className="logo">
+                            <img
+                              src="/avatar.png"
+                              alt=""
+                              className="absolute -top-10"
+                            />
                           </div>
-                        )}
+                          {active === i && (
+                            <div>
+                              <h2 className="absolute bottom-[40px] font-semibold para text-white">
+                                {lang.name}
+                              </h2>
+                              <br />
+                              <p className=" absolute bottom-[20px] opacity-80 ">
+                                Business Analyst
+                              </p>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                </>
-              );
-            })}
-          </Swiper>
+                    </SwiperSlide>
+                  </>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
       {/* <Carousel /> */}

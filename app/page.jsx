@@ -22,12 +22,12 @@ export default function Home() {
       </div>
       <Video />
       <Typograph />
-      {/* <AboutUs /> */}
-      {/* <Team /> */}
-      {/* <FeedBack /> */}
-      {/* <Contact /> */}
-      {/* <Insight /> */}
-      {/* <Footer /> */}
+      <AboutUs />
+      <Team />
+      <FeedBack />
+      <Contact />
+      <Insight />
+      <Footer />
     </div>
   );
 }

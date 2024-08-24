@@ -6,7 +6,7 @@ import gsap from "gsap";
 import Gallery from "../gallery/page";
 
 const phrase =
-  "            Chúng tôi là creative agency thiết kế website và xây dựng thương hiệu, Chúng tôi giúp doanh nghiệp kết nối với khách hàng bằng câu chuyện của thị giác, ngôn từ và sức mạnh của công nghệ.";
+  "         Chúng tôi là creative agency thiết kế website và xây dựng thương hiệu, Chúng tôi giúp doanh nghiệp kết nối với khách hàng bằng câu chuyện của thị giác, ngôn từ và sức mạnh của công nghệ.";
 
 export default function Typograph() {
   let refs = useRef([]);

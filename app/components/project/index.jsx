@@ -16,7 +16,7 @@ export default function Project({ index, title, setModal, content }) {
       <div className="flex justify-between text-white px-5 items-center duration-500 delay-200">
         <div className="flex gap-10 items-center">
           <span className="duration-500 delay-200">({index + 1})</span>
-          <span className="text-[82px] w-[640px] duration-500 delay-200">{title}</span>
+          <span style={{lineHeight: "1"}} className="text-[82px] w-[640px] duration-500 delay-200">{title}</span>
         </div>
       </div>
       <span className="opacity-0 text-[19px] group-hover:opacity-100 transition-all duration-500 delay-200 w-[350px]">
